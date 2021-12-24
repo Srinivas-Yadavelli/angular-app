@@ -6,7 +6,11 @@
 <p>servers working on</p><h1>
   <button class="btn btn-primary" [disabled] = "!allowServer" (click) = "onCreateServer()">Add Server</button>
   <p>{{ onCreateServerStatus }}</p>
-
+<!--  <p *ngIf = "serverCreated"; else noServer>Served Created with name : {{ serverName }} </p>-->
+  <p *ngIf = "serverCreated" else noServer>Served Created with name : {{ serverName }} </p>
+  <ng-template #noServer>
+    <p>Server not created bro!!</p>
+  </ng-template>
 <server-component></server-component>
 <server-component></server-component>
 </h1>
