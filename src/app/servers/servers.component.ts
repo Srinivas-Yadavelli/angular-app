@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
    allowServer = false;
-   serverName = '';
+   serverName = 'TestServer';
    onCreateServerStatus = 'Server is not created yet!!!!';
 
   constructor() {
@@ -23,7 +23,7 @@ export class ServersComponent implements OnInit {
 
   }
   onCreateServer(){
-  this.onCreateServerStatus = 'Now Server Successfully Created';
+  this.onCreateServerStatus = 'Now Server Successfully Created  : ' + this.serverName;
   }
   onUpdateServerName(event : Event){
 console.log(event);
